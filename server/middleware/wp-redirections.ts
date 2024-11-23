@@ -46,10 +46,8 @@ export default defineEventHandler(async (event) => {
 
         sendRedirect(event, redirectUrl, redirect.action_code === 301 ? 308 : 307)
 
-
     }catch (error: unknown) {
         console.error(error)
         return
     }
-
 })
