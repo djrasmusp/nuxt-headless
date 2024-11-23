@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 
-const generatedFilePath = "types/graphql/gql.ts";
+const generatedFilePath = "gql/gql.ts";
 
 (async () => {
     try {

@@ -11,10 +11,10 @@ const config: CodegenConfig = {
         },
     },
     generates: {
-        "types/graphql/": {
+        "gql/": {
             preset: "client",
         },
-        "types/graphql/schema.gql": {
+        "gql/schema.gql": {
             plugins: ["schema-ast"],
         },
     },
