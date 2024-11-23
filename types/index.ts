@@ -1,1 +1,1 @@
-export * from "./wp/redirections"
+export * from "./wp/Redirections"
