@@ -7,9 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "codegen": "graphql-codegen --config codegen.ts && node ./add-ts-nocheck.js"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "graphql": "^16.9.0",
     "graphql-tag": "^2.12.6",
     "nuxt": "^3.14.1592",
