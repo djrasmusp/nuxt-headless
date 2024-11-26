@@ -4,11 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --https --ssl-key localhost-key.pem --ssl-cert localhost.pem",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-key localhost-key.pem --ssl-cert localhost.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "codegen": "graphql-codegen --config codegen.ts && node ./add-ts-nocheck.js"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "dotenv": "^16.4.5",

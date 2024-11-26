@@ -7,12 +7,11 @@ export default defineNuxtConfig({
     public: {
       BASE_URL: process.env.NUXT_PUBLIC_BASE_URL,
       WP_URL: process.env.NUXT_PUBLIC_WORDPRESS_API_URL,
-      WP_HOSTNAME: process.env.NUXT_PUBLIC_WORDPRESS_API_HOSTNAME
-
+      WP_HOSTNAME: process.env.NUXT_PUBLIC_WORDPRESS_API_HOSTNAME,
+      GQL_HOST: process.env.NUXT_PUBLIC_WORDPRESS_API_URL + '/graphql',
     },
   },
-
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['nuxt-graphql-client']
+  modules: ['nuxt-graphql-client'],
 })
