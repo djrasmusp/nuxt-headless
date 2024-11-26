@@ -1,0 +1,11 @@
+query navigation($location: MenuLocationEnum = PRIMARY_MENU) {
+    menuItems(where: {location: $location}) {
+        nodes {
+            key: id
+            parentId
+            title: label
+            target
+            url: path
+        }
+    }
+}

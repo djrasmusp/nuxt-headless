@@ -4,23 +4,16 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev --https --ssl-key localhost-key.pem --ssl-cert localhost.pem",
+    "dev": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-key localhost-key.pem --ssl-cert localhost.pem",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "codegen": "graphql-codegen --config codegen.ts && node ./add-ts-nocheck.js"
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
-    "graphql": "^16.9.0",
-    "graphql-tag": "^2.12.6",
     "nuxt": "^3.14.1592",
+    "nuxt-graphql-client": "^0.2.41",
     "vue": "latest",
     "vue-router": "latest"
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "^5.0.3",
-    "@graphql-codegen/client-preset": "^4.5.1",
-    "@graphql-codegen/schema-ast": "^4.1.0"
   }
 }
